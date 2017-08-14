@@ -1,0 +1,34 @@
+{
+  "name": "angular-base64-download",
+  "version": "0.0.1",
+  "description": "Simple implementation of base64 download files for angularjs applications",
+  "main": "base64-download.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulsluz/angular-base64-download.git"
+  },
+  "keywords": [
+    "angularjs",
+    "base64",
+    "download"
+  ],
+  "author": "Saul Luz <saulsluz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saulsluz/angular-base64-download/issues"
+  },
+  "homepage": "https://github.com/saulsluz/angular-base64-download#readme",
+  "devDependencies": {
+    "jasmine": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.3"
+  }
+}

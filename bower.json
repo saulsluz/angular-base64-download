@@ -1,0 +1,26 @@
+{
+  "name": "angular-base64-download",
+  "homepage": "https://github.com/saulsluz/angular-base64-download",
+  "authors": [
+    "Saul Luz <saulsluz@gmail.com.br>"
+  ],
+  "description": "Simple implementation of base64 download files for angularjs applications",
+  "main": "base64-download.js",
+  "keywords": [
+    "angularjs",
+    "base64",
+    "download"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.6.5",
+    "angular-mocks": "^1.6.5"
+  }
+}
