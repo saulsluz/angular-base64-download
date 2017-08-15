@@ -1,0 +1,30 @@
+<html ng-app="demo">
+
+<head>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../base64-download.js"></script>
+  <script>
+    angular.module('demo', ['ngBase64Download'])
+      .controller('demoCtrl', ['base64DownloadFactory', '$scope', function (base64DownloadFactory, $scope) {
+        $scope.download = function () {
+          console.log('download')
+          var base64Data = btoa($scope.content);
+          base64DownloadFactory.download('data:' + $scope.mimeType + ';base64,' + base64Data, $scope.fileName, $scope.fileExtension)
+        }
+        $scope.fileName = "MyFile"
+        $scope.fileExtension = "txt"
+        $scope.mimeType = "text/plain"
+        $scope.content = "Aenean efficitur mi at purus imperdiet, non pharetra tortor consequat. Ut ac finibus mi, et consequat tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent rhoncus, justo at lobortis viverra, neque felis posuere justo, et cursus libero nunc et odio. Quisque iaculis leo rutrum nisi lobortis tempor. Donec ac nibh in lorem sagittis mattis. Pellentesque a diam vel libero tempor maximus. Etiam quis condimentum leo. Suspendisse suscipit euismod ultrices. Praesent ante felis, maximus at bibendum at, tempor et justo. Aliquam eget interdum elit. Aliquam odio massa, facilisis eget erat dictum, iaculis pharetra nulla. Ut fringilla faucibus mauris, sit amet blandit purus blandit nec. Praesent malesuada purus turpis, quis lobortis elit ultricies id. In lectus risus, congue eu sapien in, varius scelerisque massa. Sed finibus posuere lacus ut lacinia."
+      }])
+  </script>
+</head>
+
+<body ng-controller="demoCtrl">
+  <p>File Name: <br><input ng-model="fileName"></p>
+  <p>File Extension: <br><input ng-model="fileExtension"></p>
+  <p>File MimeType: <br><input ng-model="mimeType"></p>
+  <p>Content: <br><textarea ng-model="content" cols="50" rows="20"></textarea></p>
+  <p><button ng-click="download()">Download</button></p>
+</body>
+
+</html>
