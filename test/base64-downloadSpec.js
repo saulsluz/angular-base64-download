@@ -31,8 +31,8 @@ describe('ngBase64Download', function () {
           $scope.str = base64DownloadFactory.download('data:text/plain;base64,aGVsbG8=')
         })
   
-        it('Should contain hello', function () {
-          expect($scope.str).toEqual('hello')
+        it('Should contain base64("hello")', function () {
+          expect($scope.str).toEqual('aGVsbG8=')
         })
 
       })
